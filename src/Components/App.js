@@ -4,11 +4,10 @@ import CtBtn from "./CounterButton"
 function App() {
   
     return(
-        <div> 
-            
-            <CtBtn /> 
-            
-            </div>
+        <div>             
+          <CtBtn /> 
+          jkjk
+        </div>
       
     )
   }
