@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./CountBtn.css"
 
 /*let CC=10  Cuttent Count*/
 
@@ -15,7 +16,6 @@ function CtBtn(props) {
     }
     const btnstyl = {
         background : props.buttonColor,
-        borderRadius : props.brdr
     }
     const DivStyle = {
         color :"blue",
@@ -25,7 +25,7 @@ function CtBtn(props) {
     return (
     <div style = {DivStyle}> 
         <button style = {btnstyl} onClick={add}> +{props.incrementBy} </button>
-        <div> {CC}</div>
+        <div className="ctdisplay"> {CC}</div>
     </div>           
     )
 }
