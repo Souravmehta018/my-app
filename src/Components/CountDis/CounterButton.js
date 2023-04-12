@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "./CountBtn.css"
 
 /*let CC=10  Cuttent Count*/
@@ -9,7 +9,15 @@ function CtBtn(props) {
                              array and mark it as "useState" displaying it's importance in 
                              output of code. No we can not define these 2 as use state variables
                              separately*/
-    console.log(props.incrementBy)
+   // console.log(props.incrementBy)
+
+    useEffect(function(){
+        console.log("web page loaded")
+    }, [])
+    useEffect(function(){
+        console.log("Button Used")
+    },[CC])
+
     function add() {
       /*  setCC(CC+11)      ~this was the code with pre assigned value for each time function is <called></called> */
       setCC(CC + props.incrementBy) /*this is the code where value in function can be set wile calling it */

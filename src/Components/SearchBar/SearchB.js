@@ -3,9 +3,9 @@ import "./SearchB.css"
 
 //const srchval = "this is srch val"
 
-const products = ["tooth brush", "tooth paste", "mouth wash", "mouth cleaner"]
+//const products = ["tooth brush", "tooth paste", "mouth wash", "mouth cleaner"]
 
-function SearchBar(){
+function SearchBar(props){
     const [srchval,newSrchVal] = useState("search value")
 
     function arltchng(event) {
@@ -18,7 +18,7 @@ function SearchBar(){
 
     const shouldWeDisplayClrBton = srchval.length > 0
 
- const searchP = products.filter(function(product){
+ const searchP = props.products.filter(function(product){
     return product.includes(srchval)
  })
 
